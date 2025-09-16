@@ -1,0 +1,23 @@
+def gcd(x, y):
+    if y == 0:
+        return x
+    return gcd(y,  x % y)
+
+def lcm(x, y):
+    return abs(x * y) // gcd(x, y)
+
+
+
+
+
+while True:
+    x = int(input("Enter the value of x: "))
+    y = int(input("Enter the value of y: "))
+
+
+    if x  > 0 and y > 0:
+        break
+    print("error: only positive numbers greather than 0 are allowed. please try again.")
+
+print(f"The LCM of {x} and {y} is = {lcm(x, y)}")
+
